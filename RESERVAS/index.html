@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="/logo.png" type="image/png" />
+    <title>Restaurante</title>
+  </head>
+  <body>
+    <header>
+      <nav class="barra-navegacion">
+        <a href="/index.html" class="nav-item">Inicio</a>
+        <a href="/MENU/index.html" class="nav-item">Menu</a>
+        <a href="#" class="nav-item">Reservas</a>
+        <a href="/CONTACTO/index.html" class="nav-item">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <div class="login">
+        <form action="" class="container">
+          <h1 class="login__title">RESERVAS</h1>
+          <p class="duda">
+            Para hacer una reserva necesitamos la siguiente informacion
+          </p>
+
+          <div class="login__content">
+            <div class="login__box">
+              <i class="ri-user-3-line login__icon"></i>
+
+              <div class="login__box-input">
+                <input
+                  type="text"
+                  required
+                  name="name"
+                  class="login__input"
+                  id="name"
+                  placeholder=" "
+                />
+                <label for="login-email" class="login__label"
+                  >Nombre y Apellido</label
+                >
+              </div>
+            </div>
+
+            <div class="login__box">
+              <i class="ri-user-3-line login__icon"></i>
+
+              <div class="login__box-input">
+                <input
+                  type="text"
+                  required
+                  name="name"
+                  class="login__input"
+                  id="name"
+                  placeholder=" "
+                />
+                <label for="login-email" class="login__label"
+                  >Cantidad de personas</label
+                >
+              </div>
+            </div>
+
+            <div class="login_box-input">
+              <label for="fecha">Fecha</label> <br /><br />
+              <input type="date" required name="fecha" id="fecha" />
+            </div>
+          </div>
+          <button type="submit" class="login__button">Enviar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

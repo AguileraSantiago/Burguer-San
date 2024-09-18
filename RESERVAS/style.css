@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url(./IMG/fondo-hamb.jpg);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100vw;
+}
+
+.barra-navegacion {
+  background-color: hsla(0, 0%, 10%, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 20px;
+  opacity: 1;
+}
+
+.nav-item {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  letter-spacing: 2px;
+  border: 1px solid gold;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+input,
+button {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.duda {
+  font-size: 14px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#motivo {
+  padding: 10px;
+  font-size: 16px;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.motivo {
+  padding: 10px;
+}
+.value-fondo {
+  color: #000;
+}
+
+.container {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid white;
+  margin-top: 20rem;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+
+  /* Para ajustar el tamaño del contenedor */
+  width: 100%;
+  max-width: 600px; /* Limitar el ancho máximo */
+  box-sizing: border-box; /* Asegurarse de que padding y border se incluyan en el ancho total */
+}
+
+.login__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.login__content,
+.login__box {
+  display: grid;
+}
+
+.login__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.login__icon,
+.login__eye {
+  font-size: 1.25rem;
+}
+
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.login__box-input {
+  position: relative;
+}
+
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+}
+
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+
+.login__check,
+.login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__check {
+  margin-bottom: 1.5rem;
+}
+
+.login__check-label,
+.login__forgot,
+.login__register {
+  font-size: 0.813rem;
+}
+
+.login__check-group {
+  column-gap: 0.5rem;
+}
+
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.login__forgot {
+  color: hsl(0, 0%, 100%);
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+
+.login__button:hover {
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.login__input:focus + .login__label {
+  top: -17px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(241, 84, 84);
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: 0.813rem;
+}
+
+@media (min-width: 280px) and (max-width: 720px) {
+  .barra-navegacion {
+    font-size: 14px;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Asegurarse de que tome todo el ancho de la pantalla */
+    height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+    padding: 0 20px; /* Evitar que el contenido toque los bordes */
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100vh;
+    max-width: 320px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    max-width: 320px; /* Limitar el ancho del contenedor en móviles */
+    margin-top: 0; /* Eliminar margen superior */
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .barra-navegacion {
+    font-size: 18px;
+    padding: 18px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .barra-navegacion {
+    font-size: 20px;
+  }
+}
